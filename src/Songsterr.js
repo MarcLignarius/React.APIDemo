@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
-const urlForUsername = username =>
-	`http://www.songsterr.com/a/ra/songs.json?pattern=${username}`
+const urlForArtist = artist =>
+	`http://www.songsterr.com/a/ra/songs.json?pattern=${artist}`
 
 class Songsterr extends Component {
 	constructor(props) {
@@ -18,7 +16,7 @@ class Songsterr extends Component {
 	}
 
 	componentDidMount() {
-		fetch(urlForUsername(this.props.username))
+		fetch(urlForArtist(this.props.artist))
 			.then(response => {
 				if (!response.ok) {
 					throw Error('Network request failed')
@@ -43,7 +41,7 @@ class Songsterr extends Component {
 		console.log(this.state.songsterrData);
 		return (
 			<div>
-				<h1>Available tabs for {this.props.username}</h1>
+				<h1>Available tabs for {this.props.artist}</h1>
 				{this.state.songsterrData.map(song =>
 					<div key={song.id}>
 						<Card>

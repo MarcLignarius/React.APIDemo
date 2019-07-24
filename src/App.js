@@ -6,7 +6,7 @@ class App extends Component {
   render () {
     return (
       <div>
-        <Songsterr username='Nirvana'></Songsterr>
+        <Songsterr artist='Nirvana'></Songsterr>
       </div>
     )
   }
