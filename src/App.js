@@ -1,24 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
+import Songsterr from './Songsterr.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render () {
+    return (
+      <div>
+        <Songsterr name='Nirvana'></Songsterr>
+      </div>
+    )
+  }
 }
 
 export default App;
