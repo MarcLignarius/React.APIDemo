@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import GitHub from './Github.js';
+import Songsterr from './Songsterr.js';
 
 class App extends Component {
   render () {
     return (
       <div>
-        <GitHub username="FluentZap"></GitHub>
+        <Songsterr username='Nirvana'></Songsterr>
       </div>
     )
   }
